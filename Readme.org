@@ -1,0 +1,16 @@
+#+TITLE: breif about this project
+#+DATE: Fri Mar 24 15:16:06 NPT 2017
+
+* Title
+  ssh configuration parser
+
+* Motivation
+  - We usually have list of servers in a ssh configuration but have hard time to use that information
+other than doing ~ssh~. Wanted to make that information more generic and usable by parsing and converting
+the ~.ssh/config~
+
+* Current Workflow
+  - converting the document into parsable(not sure if this word exists) form
+    - removing space, extra lines, comments
+  - parsing the parsable file
+  - echoing the parsed information into a simple and usable format
