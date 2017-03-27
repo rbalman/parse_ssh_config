@@ -3,12 +3,9 @@
 
 * Title
   ssh configuration parser
-
 * Motivation
-  - We usually have list of servers in a ssh configuration but have hard time to use that information
-other than doing ~ssh~. Wanted to make that information more generic and usable by parsing and converting
+  We usually have list of servers in a ssh configuration but have hard time to use that information other than doing ~ssh~. Wanted to make that information more generic and usable by parsing and converting
 the ~.ssh/config~
-
 * Current Workflow
   - converting the document into parsable(not sure if this word exists) form
     - removing space, extra lines, comments

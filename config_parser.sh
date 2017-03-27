@@ -30,7 +30,7 @@ function parsing_ssh_config {
 			
     done < $TMP_SSH_CONFIG_FILE
 
-    #redirecting back to stdout and removing file discriptor 6
+    #redirecting back to stdout and removing file discriptor 3
     exec 1>&3 3>&-;
 
 }
@@ -39,9 +39,13 @@ function parsing_ssh_config {
 function extracting_host_info {
 
     ./extract_host_ip.awk $SSH_HARVEST | tee $HOST_N_IP
+    echo -e "\n\nkept the host and its ips in $HOST_N_IP\n"
 }
 
-    
+
+# cleans all the white spaces and comments from the config
 config_cleanup
+# parses and echo the information in generic format at  
 parsing_ssh_config
+# extracts only hostname and its ip from $SSH_HARVEST file
 extracting_host_info
