@@ -1,0 +1,10 @@
+# Collection of Variables
+SSH_CONFIG_FILE="/home/trees/.ssh/config.d/cloud.config"
+TMP_SSH_CONFIG_FILE="/tmp/tmp_ssh_config"
+
+# seperats the config of one host to other
+HOST_SEPERATOR="Host"
+
+# final data gets stored here
+SSH_HARVEST=$HOME/".sshharvest"
+HOST_N_IP=$HOME/".host_n_ips"
